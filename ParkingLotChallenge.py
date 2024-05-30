@@ -6,15 +6,6 @@ class ParkingLot:
         self.Spot_Size = int(Parking_Spot_Size)
         self.Num_Spots = Size_In_Square_Footage // self.Spot_Size
         self.Parking_lot= ["empty"] * self.Num_Spots
-    
-    # def map(self):
-    #     Output = {}
-    #     for spot,licenseplate in enumerate(self.Parking_lot):
-    #         Output[spot] = str(licenseplate)
-        # print(Output)
-        # with open("Response.json", 'w') as file:
-        #     json.dump(Output, file)
-    
 
     
 class Car:
@@ -42,7 +33,7 @@ def main(Licenseplates):
         status = car.park(Parkinglot.Parking_lot,Spot)
         print(f"Car with license plate {lp} parked successfully in spot {Spot+1}")
         Output[Spot+1] = lp
-    # print(Output)
+
 
 Output = {}
 NumberOfCars = random.randint(1,100)
